@@ -25,11 +25,21 @@ public class Dish
     }
 
     /**
+     * Allow to get the identifiant of this event.
+     * 
+     * @return The identifiant of this event.
+     */
+    public int getId()
+    {
+        return this.id;
+    }
+
+    /**
      * Allow to get the name of this dish.
      * 
      * @return The name of this dish.
      */
-    public String geName()
+    public String getName()
     {
         return this.name;
     }

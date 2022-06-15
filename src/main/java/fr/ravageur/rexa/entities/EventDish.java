@@ -30,19 +30,19 @@ public class EventDish
     @JoinColumn(name = "dishs", referencedColumnName = "id")
     private List<Dish> dishs = new ArrayList<>();
 
-    public EventDish(String name) 
+    public EventDish(String name)
     {
         event = new Event(name);
     }
 
+    /**
+     * Allow to get an event.
+     * 
+     * @return Return the event.
+     */
     public Event getEvent()
     {
         return this.event;
-    }
-
-    public void setEvent(Event event)
-    {
-        this.event = event;
     }
 
     /**
@@ -55,6 +55,11 @@ public class EventDish
     public boolean addDish(Dish dish)
     {
         return this.dishs.add(dish);
+    }
+
+    public List<Dish> getAllDishs()
+    {
+        return this.dishs;
     }
 
     /**
